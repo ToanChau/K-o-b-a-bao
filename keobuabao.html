@@ -1,11 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
     <title>Document</title>
+    <style>
+        @keyframes scoreIncrease {
+            0% {
+                transform: scale(1);
+                color: inherit;
+            }
+
+            50% {
+                transform: scale(1.3);
+                color: #22c55e;
+            }
+
+            100% {
+                transform: scale(1);
+                color: inherit;
+            }
+        }
+
+        .score-animation {
+            animation: scoreIncrease 0.5s ease-out;
+        }
+
+        .diem-so {
+            font-size: 40px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            padding: 20px;
+        }
+    </style>
 </head>
+
 <body>
-    <H1>KÉO BÚA BAO - JavaScipt</H1>
+    <div class="container pt-5 mt-3 shadow"
+        style="height: 95vh; border-radius: 30px; background-color: rgb(240, 240, 240);">
+        <h1 class="text-center text-secondary font-monospace" style="font-weight: bold;">KÉO BÚA BAO - JavaScipt</h1>
+        <h4 class="text-primary font-monospace text-center mt-5" style="font-weight:bold;">Chọn lựa chọn của bạn</h4>
+        <div class="row mt-5">
+            <div class="col-4 d-flex justify-content-center">
+                <button id="btn_bao" class="btn p-0"
+                    style="width: 150px; height: 150px; border-radius: 20px; overflow: hidden;">
+                    <img src="./img/bao.png" alt="Bao" style="width: 100%; height: 100%; object-fit: cover;">
+                </button>
+            </div>
+            <div id="btn_bua" class="col-4 d-flex justify-content-center">
+                <button class="btn p-0" style="width: 150px; height: 150px; border-radius: 20px; overflow: hidden;">
+                    <img src="./img/bua.png" alt="Bao" style="width: 100%; height: 100%; object-fit: cover;">
+                </button>
+            </div>
+            <div id="btn_keo" class="col-4 d-flex justify-content-center">
+                <button class="btn p-0" style="width: 150px; height: 150px; border-radius: 20px; overflow: hidden;">
+                    <img src="./img/keo.png" alt="Bao" style="width: 100%; height: 100%; object-fit: cover;">
+                </button>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-5 d-flex justify-content-center">
+                <button class="btn p-0"
+                    style="width: 200px;height: 200px;max-width: 200px; max-height: 200px; border-radius: 20px; overflow: hidden;">
+                    <img id="nguoi" src="./img/keo.png" alt="Bao" style="width: 100%; height: 100%; object-fit: cover;">
+                </button>
+                <div class="justify-content-center m-4">
+                    <p id="diemnguoi" class="diem-so">0</p>
+                </div>
+            </div>
+            <div class="col-2 d-flex flex-column justify-content-center">
+                <button id="btn_dau" class="btn btn-primary mb-2"><b>Đấu</b></button>
+                <img src="./img/vs.png" alt="" style="height: 150px;">
+            </div>
+            <div class="col-5 d-flex justify-content-center">
+                <div class="justify-content-center m-4">
+                    <p id="diemmay" class="diem-so">0</p>
+                </div>
+                <button class="btn p-0"
+                    style="width: 200px;height: 200px;max-width: 200px; max-height: 200px; border-radius: 20px; overflow: hidden;">
+                    <img id="may" src="./img/chamhoi.png" alt="Bao" style="width: 100%; height: 100%; object-fit: cover;">
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="./keobuabao.js"></script>
 </body>
+
 </html>
