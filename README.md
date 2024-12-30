@@ -1,4 +1,4 @@
-#KÉO BÚA BAO
+# KÉO BÚA BAO
 * Giới thiệu
   - Đây là một dự án nhỏ về trò chơi Kéo - Búa - Bao, được làm để thực hành và ôn tập kiến thức JavaScript. Trò chơi giúp bạn vừa học vừa giải trí với cách chơi đơn giản và giao diện dễ dùng.
 
